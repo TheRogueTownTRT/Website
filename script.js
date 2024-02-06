@@ -22,7 +22,7 @@ function executeCommand(command) {
     // Check the command and provide a response
     switch (command.toLowerCase()) {
         case '/collection':
-            terminalOutput.innerHTML += '<p>There are 100 NFTs in the collection.</p>';
+            terminalOutput.innerHTML += '<p>There are 333 NFTs in the collection.</p>';
             break;
         case '/discord':
             terminalOutput.innerHTML += '<p>Here is the official Discord link: <a href="https://discord.gg/P6aeYwKMsw" target="_blank">https://discord.gg/P6aeYwKMsw</a></p>';
@@ -31,7 +31,7 @@ function executeCommand(command) {
             displayCommands();
             break;
         default:
-            terminalOutput.innerHTML += '<p>Command not recognized. Please try again.</p>';
+            terminalOutput.innerHTML += '<p>/collection /discord</p>';
             break;
     }
 
