@@ -1,13 +1,13 @@
 body {
-    background-color: black;
-    color: white;
-    font-family: monospace;
+    background-color: #000; /* Black background */
+    color: #0f0; /* Neon green text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
 }
 
 #terminal {
     width: 80%;
     margin: 50px auto;
-    border: 2px solid white;
+    border: 2px solid #0f0; /* Neon green border */
     padding: 10px;
     overflow-y: auto;
     max-height: 400px;
@@ -15,13 +15,30 @@ body {
 
 #output {
     white-space: pre-wrap;
+    color: #0f0; /* Neon green text */
 }
 
 #input {
     width: 100%;
     border: none;
     background: transparent;
-    color: white;
-    font-family: monospace;
+    color: #0f0; /* Neon green text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
     outline: none;
+}
+
+/* Custom styles for the command list */
+#commands {
+    list-style-type: none;
+    padding: 0;
+}
+
+#commands li {
+    font-size: 16px; /* Decrease font size */
+    margin-bottom: 8px; /* Reduce margin bottom */
+}
+
+#commands li:before {
+    content: '>'; /* Change bullet to ">" */
+    margin-right: 5px;
 }
