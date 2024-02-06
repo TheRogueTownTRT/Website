@@ -20,7 +20,7 @@ function executeCommand(command) {
     terminalOutput.innerHTML += '<p>$ ' + command + '</p>';
 
     // Check the command and provide a response
-    switch (command.toLowerCase()) {
+    switch (command.toLowerCase().trim()) { // Convert to lowercase and trim whitespace
         case '/collection':
             terminalOutput.innerHTML += '<p>There are 333 NFTs in the collection.</p>';
             break;
