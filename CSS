@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
+#terminal {
+    width: 80%;
+    margin: 50px auto;
+    border: 2px solid white;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+#output {
+    white-space: pre-wrap;
+}
+
+#input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: monospace;
+    outline: none;
+}
