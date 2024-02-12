@@ -9,7 +9,11 @@ terminalOutput.innerHTML = '<p>Welcome to The Rogue Town\'s Terminal Website! Ty
 terminalInput.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         const command = terminalInput.value.trim(); // Get the entered command
-        executeCommand(command); // Execute the command
+        if (command.startsWith('/')) {
+            executeCommand(command); // Execute the command if it starts with '/'
+        } else {
+            terminalOutput.innerHTML += '<br>'; // Otherwise, skip a line
+        }
         terminalInput.value = ''; // Clear the input field
     }
 });
