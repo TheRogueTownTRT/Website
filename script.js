@@ -3,7 +3,7 @@ const terminalOutput = document.getElementById('output');
 const terminalInput = document.getElementById('input');
 
 // Initial welcome message
-terminalOutput.innerHTML = '<p>Welcome to The Rogue Town\'s Terminal Website! Type commands to interact:</p>';
+terminalOutput.innerHTML = '<p>Welcome to The Rogue Town\'s Terminal Website! Type <span class="command">/commands</span> to interact:</p>';
 
 // Event listener for user input
 terminalInput.addEventListener('keyup', function(event) {
