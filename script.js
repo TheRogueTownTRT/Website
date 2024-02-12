@@ -30,8 +30,11 @@ function executeCommand(command) {
         case '/commands':
             displayCommands();
             break;
+        case '/todo':
+            displayTodoList();
+            break;
         default:
-            terminalOutput.innerHTML += '<p>/collection /discord</p>';
+            terminalOutput.innerHTML += '<p>Command not recognized. Type "/commands" to see available commands.</p>';
             break;
     }
 
@@ -45,7 +48,26 @@ function displayCommands() {
     terminalOutput.innerHTML += '<ul>';
     terminalOutput.innerHTML += '<li>/collection - Gives the amount of NFTs in the collection</li>';
     terminalOutput.innerHTML += '<li>/discord - Gives the official Discord link</li>';
+    terminalOutput.innerHTML += '<li>/todo - Displays the todo list</li>';
     terminalOutput.innerHTML += '<li>/commands - Shows available commands</li>';
     // Add more commands as needed
     terminalOutput.innerHTML += '</ul>';
+}
+
+// Function to display the todo list
+function displayTodoList() {
+    // Retrieve todo list from local storage
+    const todoList = JSON.parse(localStorage.getItem('todoList')) || [];
+
+    // Display todo list
+    if (todoList.length > 0) {
+        terminalOutput.innerHTML += '<p>Todo List:</p>';
+        terminalOutput.innerHTML += '<ul>';
+        todoList.forEach((item, index) => {
+            terminalOutput.innerHTML += `<li>${index + 1}. ${item}</li>`;
+        });
+        terminalOutput.innerHTML += '</ul>';
+    } else {
+        terminalOutput.innerHTML += '<p>No todos found.</p>';
+    }
 }
